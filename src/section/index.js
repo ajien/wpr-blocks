@@ -9,7 +9,6 @@ import './editor.scss';
 
 import editSection from './edit'
 import saveSection from './save'
-import deprecatedBlock from './deprecated'
 import blockAttributes from './attributes'
 
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
@@ -49,7 +48,7 @@ const FallbackStyles = withFallbackStyles( ( node, ownProps ) => {
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'mkl/section-block', {
+registerBlockType( 'wpr/section-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __( 'Section' ), // Block title.
 	icon: 'align-center', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
@@ -58,6 +57,9 @@ registerBlockType( 'mkl/section-block', {
 		__( 'section' ),
 		__( 'container' ),
 	],
+	supports: {
+		align: [ 'center', 'wide', 'full' ], //set to true to enable all options
+	},
 	attributes: blockAttributes,
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
@@ -82,13 +84,11 @@ registerBlockType( 'mkl/section-block', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	save: saveSection,
-
-	deprecated: deprecatedBlock,
 	/**
 	 * wrapper props
 	 * @param {*} attributes 
 	 */
 	getEditWrapperProps( attributes ) {
-		return { 'data-align': 'full' };
+		return { 'data-align': attributes.align };
 	},
 } );

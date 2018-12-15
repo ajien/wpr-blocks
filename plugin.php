@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Gutenberg Section Block
- * Plugin URI: https://github.com/marcusig/gutenberg-section-block/
- * Description: Section block — is a Gutenberg plugin created via create-guten-block.
- * Author: marcusig, mklacroix
- * Author URI: https://mklacroix.com/
+ * Plugin Name: WPR Custom Gutenberg Blocks
+ * Plugin URI: https://github.com/ajien/wpr-blocks/
+ * Description: WPR Custom Gutenberg Blocks is a Gutenberg plugin created via create-guten-block.
+ * Author: ajien
+ * Author URI: https://aaronjeffreynolasco.com/
  * Version: 1.1.1
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt

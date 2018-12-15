@@ -3,6 +3,10 @@ export default {
 		type: 'string',
 		default: 'section',
 	},
+	align: {
+		type: 'string',
+		default: 'full',
+	},
 	enableSpacing: {
 		type: 'boolean',
 		default: false

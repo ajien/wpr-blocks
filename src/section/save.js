@@ -23,12 +23,16 @@ export default ( { attributes, className } ) => {
 		spacingTop,
 		bgImage,
 		bgOptions,
+		align,
 		enableSpacing
 	} = attributes;
+
 	const backgroundClass = getColorClassName( 'background-color', backgroundColor );
+	
 	const classes = classnames(
 		{
 			className,
+			align,
 			[backgroundClass]: backgroundClass
 		}
 	)
@@ -40,7 +44,7 @@ export default ( { attributes, className } ) => {
 		paddingTop: (!! enableSpacing) && spacingTop ? spacingTop : undefined,
 	}
 	return (
-		<Section tagName={tagName} className={ classes ? classes : undefined } style={ styles }>
+		<Section tagName={tagName} className={ classes ? classes : '' } style={ styles }>
 			{ !! bgImage && <div
 				className={ classnames( 
 					'section-bg', {

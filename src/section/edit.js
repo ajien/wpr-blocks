@@ -97,7 +97,7 @@ export default ( props ) => {
 					}
 				</PanelBody>
 				<PanelBody
-					title={ __( 'Background image' ) }
+					title={ __( 'Background' ) }
 					initialOpen={ false }
 				>
 					{ ! bgImage &&
