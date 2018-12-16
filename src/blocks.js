@@ -9,4 +9,6 @@
  * Webpack is compiling as the input file.
  */
 
-import './section';
+import './blocks/section';
+import './blocks/divider';
+import './helpers/custom-panel';

@@ -63,3 +63,11 @@ function section_block_cgb_editor_assets() {
 
 // Hook: Editor assets.
 add_action( 'enqueue_block_editor_assets', 'section_block_cgb_editor_assets' );
+
+
+function gutenberg_my_block_init() {
+    register_meta( 'post', 'custom_meta', array(
+        'show_in_rest' => true,
+    ) );
+}
+add_action( 'init', 'gutenberg_my_block_init' );

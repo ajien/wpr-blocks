@@ -11,3 +11,15 @@ $white: #f4f4f4;
 $gray: #dedede;
 $green: #bada55;
 $red: orangered;
+
+
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+.flip-vertical {
+    transform: scaleY(-1);
+}
+
+.flip-horizontal.flip-vertical {
+    transform: scaleX(-1) scaleY(-1);
+}

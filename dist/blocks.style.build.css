@@ -4,6 +4,75 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
+.flip-horizontal {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
+.flip-vertical {
+  -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1); }
+
+.flip-horizontal.flip-vertical {
+  -webkit-transform: scaleX(-1) scaleY(-1);
+      -ms-transform: scaleX(-1) scaleY(-1);
+          transform: scaleX(-1) scaleY(-1); }
+
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-wpr-section-block {
+  position: relative; }
+  .wp-block-wpr-section-block, .entry-content > .wp-block-wpr-section-block {
+    max-width: none;
+    width: 100%; }
+  .wp-block-wpr-section-block .section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    max-width: none;
+    z-index: 0; }
+    .wp-block-wpr-section-block .section-bg.bg__repeated {
+      background-repeat: repeat; }
+    .wp-block-wpr-section-block .section-bg.bg__stretched {
+      background-size: cover; }
+    .wp-block-wpr-section-block .section-bg.bg__fixed {
+      background-attachment: fixed;
+      background-position: 50% 50%; }
+    .wp-block-wpr-section-block .section-bg ~ * {
+      z-index: 1;
+      position: relative; }
+  .wp-block-wpr-section-block > *:last-child,
+  body.page:not(.twentyseventeen-front-page) .entry-content .wp-block-wpr-section-block > *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.flip-horizontal {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
+.flip-vertical {
+  -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1); }
+
+.flip-horizontal.flip-vertical {
+  -webkit-transform: scaleX(-1) scaleY(-1);
+      -ms-transform: scaleX(-1) scaleY(-1);
+          transform: scaleX(-1) scaleY(-1); }
+
 /**
  * #.# Styles
  *

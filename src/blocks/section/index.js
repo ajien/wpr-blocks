@@ -51,7 +51,7 @@ const FallbackStyles = withFallbackStyles( ( node, ownProps ) => {
 registerBlockType( 'wpr/section-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __( 'Section' ), // Block title.
-	icon: 'align-center', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	icon: 'screenoptions', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'layout', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'section' ),
